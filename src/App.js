@@ -12,39 +12,47 @@ import React, { useReducer } from 'react';
 import Comp1 from './Components/Comp1';
 import Comp2 from './Components/Comp2';
 import Comp3 from './Components/Comp3';
+import Comp5 from './Components/Comp5';
 // import Bcd from './Components/Bcd';
 // import Reducer from './Components/Reducer';
 // export const UserContext=React.createContext()
 // export const PasswordContext=React.createContext()
 export const UserCounter=React.createContext()
 function App() {
-  const initstate=0
-  const reducer=(state,action)=>{
-    switch(action){
-      case 'inc':return state+1;
-      case 'dec':return state-1;
-      case 'res':return initstate;
-      default :return state
-    }
-  }
-  const[count,dispatch]=useReducer(reducer,initstate)
-  return (
-    <>
-    {count}
-    <UserCounter.Provider value={{count:count,dispatch:dispatch}}>
-      <Comp1/>
-      <Comp2/>
-      <Comp3/>
-    </UserCounter.Provider>
+  // const initstate=0
+  // const reducer=(state,action)=>{
+  //   switch(action){
+  //     case 'inc':return state+1;
+  //     case 'dec':return state-1;
+  //     case 'res':return initstate;
+  //     default :return state
+  //   }
+  // }
+  // const[count,dispatch]=useReducer(reducer,initstate)
+  // return (
+  //   <>
+  //   {count}
+  //   <UserCounter.Provider value={{count:count,dispatch:dispatch}}>
+  //     <Comp1/>
+  //     <Comp2/>
+  //     <Comp3/>
+  //     <Comp5/>
+  //   </UserCounter.Provider>
+
+
+
      {/* <UserContext.Provider value={{"name":"Sasikumar","age":20}}>
     <PasswordContext.Provider value={"sk@12345"}>
         <Bcd/>
     </PasswordContext.Provider>
 </UserContext.Provider>
 <Reducer/> */}
+    
+  return(
+    <>
+    <Loader/>
     </>
-   
-  );
+  )
 }
 
 export default App;
