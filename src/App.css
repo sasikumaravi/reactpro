@@ -44,6 +44,11 @@
 }
 .progressbar{
   height: 100%;
-  background-color: chartreuse;
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
   transition: width 1s linear;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
